@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tarjetes_flexbox</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            min-height: 100%;
+        }
+        img{
+            width: 100%;
+        }
+        body{
+            font-family: "georgia" cursive;
+            font-size: 18px;
+            background: linear-gradient(38deg,#d80cc0,#178998,#981789);
+            color: purple;
+        }
+        .container{
+            display:flex;
+            flex-direction: row;
+            padding: 2em 4em;
+            justify-content: center;
+            border-radius: 20px;
+        }
+        .dissenyador{
+            width: 20em;
+            margin: 1em;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 10px 10px 25px #0a0714 ;
+            border-radius: 20px;
+            display:flex; 
+            flex-direction: column;
+        }
+        .dissenyador_img{
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            background: purple;
+            border-radius: 20px 20px 0 0;
+            
+        }
+        .dissenyador_img img{
+           border-radius: 20px 20px 0 0;
+            height: 100%;
+            object-fit: cover;
+            mix-blend-mode: luminosity;
+            
+        }
+        .dissenyador:first-child .dissenyador_img img{
+            object-position: right;
+        }
+        .dissenyador:last-child .dissenyador_img img{
+            object-position: center;
+        }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content:space-between;
+            border-bottom: 1px solid purple;
+            align-items: baseline,
+        }
+        h3{
+            font-style: italic;
+            font-weight: bold;
+        }
+        span{
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 1em;
+        }
+        .dissenyador_contingut{
+            flex-grow: 1;
+            text-align: justify;
+            hyphens: auto;
+            margin:1em 1em  0.5em 1em;
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+        footer{
+            background: purple;
+            color: white;
+            font-size: 0.9;
+            font-style: italic;
+            border-radius: 0 0 20px 20px;
+            padding: 0.6em;
+        }
+        @media (max-width:700px){
+            body{
+                font-size: 16px;
+            }
+            .container{
+                 flex-direction:column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dissenyador">
+           <div class="dissenyador_img">
+              <img src="img/disenador1.jpg" alt="Stefan Sagmeister">
+           </div>
+           <header>
+               <h3>Stefan Sagmeister</h3>
+               <span>1962</span>
+           </header>
+           <p class="dissenyador_contingut">
+              Sagmeister studied graphic design at the University of Applied Arts Vienna. He later received a Fulbright scholarship to study at the Pratt Institute in New York. He began his design career at the age of 15 at "Alphorn", an Austrian Youth magazine, which is named after the traditional Alpine musical instrument.In 1991, he moved to Hong Kong to work with Leo Burnett's Hong Kong Design Group. In 1993, he returned to New York to work with Tibor Kalman's MyCo design company. His tenure there was short lived, as Kalman soon decided to retire from the design business to edit Colors magazine for the Benetton Group in Treviso, Italy.[1]Stefan Sagmeister proceeded to form the New York-based Sagmeister Inc. in 1993 and has since designed branding, graphics, and packaging for clients as diverse as the Rolling Stones, HBO, the Guggenheim Museum and Time Warner. Sagmeister Inc. has employed designers including Martin Woodtli, and Hjalti Karlsson and Jan Wilker, who later formed Karlssonwilker.Stefan Sagmeister is a long-standing artistic collaborator with musicians David Byrne and Lou Reed. He is the author of the design monograph "Made You Look" which was published by Booth-Clibborn editions.Solo shows on Sagmeister, Inc.'s work have been mounted in Zurich, Vienna, New York, Berlin, Japan, Osaka, Prague, Cologne, and Seoul. He teaches in the graduate department of the School of Visual Arts in New York and has been appointed as the Frank Stanton Chair at the Cooper Union School of Art, New York.His motto is "Design that needed guts from the creator and still carries the ghost of these guts in the final execution."Sagmeister goes on a year-long sabbatical around every seven years, where he does not take work from clients.
+           </p>
+           <footer class="dissenyador_peu">
+               Sagmeister received a Grammy Award in 2005 in the Best Boxed or Special Limited Edition Package category for art directing Once in a Lifetime box set by Talking Heads. He received a second Grammy Award for his design of the David B. and Brian Eno album Everything That Happens Will Happen Today in the Grammy Award for Best Recording Package category on January 31, 2010.
+           </footer>
+    </div>
+        <div class="dissenyador">
+        <div class="dissenyador_img">
+            <img src="img/disenador2.jpg" alt="Paula Scher">
+        </div>
+        <header>
+            <h3>Paula Scher</h3>
+            <span>1948</span>
+        </header>
+        <p class="dissenyador_contingut">
+            Paula Scher is one of the most influential graphic designers in the world. Described as the “master conjurer of the instantly familiar,” Scher straddles the line between pop culture and fine art in her work. Iconic, smart, and accessible, her images have entered into the American vernacular.Her work has been exhibited all over the world and is represented in the permanent collections of the Museum of Modern Art and the Cooper-Hewitt National Design Museum in New York, the Library of Congress in Washington, D.C., the Philadelphia Museum of Art, the Denver Art Museum, the Victoria and Albert Museum, London, the Museum für Gestaltung Zürich, and the Bibliothèque nationale de France and the Centre Georges Pompidou in Paris.Scher holds a BFA from the Tyler School of Art and honorary doctorates from the Corcoran College of Art and Design, the Maryland Institute College of Art, and Moore College of Art and Design. Her teaching career includes over two decades at the School of Visual Arts,Corcoran College of Art and Design along with positions at the Cooper Union, Yale University and the Tyler School of Art. She is the author of Make It Bigger (2002) and MAPS (2011), both published by Princeton Architectural Press, and the subject of Paula Scher: Works (2017), edited by Tony Brook and Adrian Shaughnessy and published by Unit Editions. Scher is featured in “Abstract: The Art of Design,” the Netflix documentary series about leading figures in design and architecture.
+        </p>
+        <footer class="dissenyador_peu">
+            Art Directors Club Hall of Fame 1998, Chrysler Award for Innovation in Design 2000, AIGA Medal 2001, * National Design Award (Cooper Hewitt Smithsonian) 2013 doctorates from Corcoran School of Art, Maryland Institute of Art and Moore College of ArtThe School of Visual Arts grants a Master Series Award, showcase of Make It BiggerAwards: Print's Regional Design Annual 2011 for Shakespeare in the Park 2010 campaign, Map Murals for Queens Metropolitan Campus, and Environmental Graphic for Parking Garage at 13-17 East 54th Street.
+        </footer>
+    </div>
+    </div>
+</body>
+</html>
